@@ -1,0 +1,31 @@
+[package]
+name = "prover"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your@email.com>"]
+description = "Mobile-optimized ZK-STARK verifier for Cubiq blockchain"
+
+[dependencies]
+p3-goldilocks = "0.3"
+p3-field = "0.3"
+p3-matrix = "0.3"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = ["console"] }
+
+wasm-bindgen = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3"
+
+[dependencies.instant]
+version = "0.1"
+optional = true
+
+[features]
+default = ["instant"]
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+tokio = { version = "1", features = ["full"] }
+
+[lib]
+crate-type = ["cdylib", "rlib"]

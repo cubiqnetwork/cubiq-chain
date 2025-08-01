@@ -1,0 +1,20 @@
+﻿[workspace]
+resolver = "2"
+
+members = [
+    "core/zkurl",
+    "core/prover",
+    "core/consensus",
+    "core/networking"
+]
+
+[workspace.dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+p3-field = "0.3"
+p3-matrix = "0.3"
+p3-goldilocks = "0.3"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = ["console"] }
+wasm-bindgen = "0.2"
+instant = "0.1" # optional
